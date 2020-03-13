@@ -8,9 +8,10 @@ const Board = props => {
 
   const handleClick = card => {
     //if turn is capped(2) then reset the turn after 1 second.
-    if (turnsCapped(turns) || foundMatchedCard(turns, card)) return;
-    //clone "turns" array and add the specific card clicked onto it aswell.
-    //then set our "turns" array to our "newTurns" clone with our specific card object in it.
+    if (turnsCapped(turns) || foundMatchedCard(turns, card))
+      //clone "turns" array and add the specific card clicked onto it aswell.
+      //then set our "turns" array to our "newTurns" clone with our specific card object in it.
+      return;
     const newTurns = [...turns, card];
     setTurns(newTurns);
 
@@ -22,6 +23,8 @@ const Board = props => {
     if (turnsCapped(newTurns)) {
       resetTurns(1000);
     }
+
+    //functions
     function validateTurns(turns) {
       return turns.length === 2 && turns[0].type === turns[1].type;
     }
@@ -31,6 +34,7 @@ const Board = props => {
     function turnsCapped(turns) {
       return turns.length === 2;
     }
+
     function resetTurns(time) {
       setTimeout(() => {
         setTurns([]);
@@ -43,11 +47,13 @@ const Board = props => {
   };
 
   useEffect(() => {
-    const newCards = cards.map(card => ({
-      ...card,
-      flipped: turns.find(c => c.id === card.id) || matched.includes(card.type)
-    }));
-    setCards(newCards);
+    setCards(prevCards =>
+      prevCards.map(card => ({
+        ...card,
+        flipped:
+          turns.find(c => c.id === card.id) || matched.includes(card.type)
+      }))
+    );
   }, [turns, matched]);
 
   return (
@@ -57,6 +63,7 @@ const Board = props => {
           <Card {...card} onClick={() => handleClick(card)} key={card.id} />
         ))}
       </div>
+
       <button onClick={restartGame}>restart</button>
     </>
   );

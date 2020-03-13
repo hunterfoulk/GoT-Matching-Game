@@ -5,9 +5,11 @@ const Card = props => {
   const img = flipped ? backImg : frontImg;
 
   return (
+    // <div className={`card-container ${flipped ? "front" : "back"}`}>
     <div className="card" onClick={onClick}>
       <img src={img} alt="" />
     </div>
+    // </div>
   );
 };
 export default Card;

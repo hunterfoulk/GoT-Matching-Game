@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import FrontLogo from "./images/frontpic.png";
 import _ from "lodash";
 import Board from "./components/board";
+import FrontLogo from "./images/frontpic.png";
 import backImg0 from "./images/backImage0.PNG";
 import backImg1 from "./images/backImage1.PNG";
 import backImg2 from "./images/backImage2.PNG";
@@ -43,6 +43,7 @@ function gameCards() {
     backImg9
   };
   const cards = Object.keys(images).reduce((arr, i) => {
+    console.log(i);
     const getCards = () => ({
       id: id++,
       type: i,
