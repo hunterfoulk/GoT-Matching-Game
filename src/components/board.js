@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Card from "./card";
 import _ from "lodash";
-import GameLogo from "../images/toplogo.png";
 
 const Board = props => {
   const [cards, setCards] = useState(props.cards);
   const [turns, setTurns] = useState([]); //turn state array
   const [matched, setMatched] = useState([]); //matched cards state array
-  const [won, setWon] = useState(false);
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
 
   const handleClick = card => {
     //if turn is capped(2) then reset the turn after 1 second.
@@ -54,8 +52,10 @@ const Board = props => {
     setModal(false);
   };
 
+  let count = matched.length;
+
   useEffect(() => {
-    if (matched.length === 1) {
+    if (matched.length === 12) {
       setModal(true);
     }
   }, [matched]);
@@ -75,6 +75,9 @@ const Board = props => {
       <div className="board">
         <div className="text">
           <h1>Match the cards</h1>
+        </div>
+        <div className="count-container">
+          <div className="count-circle"> {count}</div>
         </div>
         {modal && (
           <div className="modal">

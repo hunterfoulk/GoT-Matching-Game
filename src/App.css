@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=MedievalSharp&display=swap");
 
-.back {
-  z-index: 2;
-  transform: rotateY(0deg);
-  background-color: grey;
-}
-
 .front {
   transform: rotateY(180deg);
 }
@@ -28,8 +22,6 @@
   display: flex;
   align-items: center;
   transition: all 1s;
-
-  /* transform: rotateY(120deg); */
 }
 
 .card img {
@@ -50,13 +42,14 @@
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  /* background-color: red; */
 }
 .board {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 100vh;
+  height: auto;
   /* background-color: rgb(129, 184, 134); */
   justify-content: center;
   align-items: center;
@@ -71,6 +64,7 @@
   width: 1300px;
   min-width: 1300px;
   margin: 10px;
+  height: 80vh;
   /* background-color: rgb(153, 99, 99); */
   overflow: hidden;
 }
@@ -103,4 +97,20 @@ button {
 }
 button:hover {
   background-color: rgb(102, 165, 86);
+}
+.count-circle {
+  margin-right: 10%;
+  font-size: 30px;
+  font-family: "MedievalSharp", cursive;
+  /* background-color: green; */
+  margin-left: 10%;
+}
+.count-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(155, 84, 84); */
+  width: 100%;
+  /* position: relative;
+  top: 30px; */
 }
