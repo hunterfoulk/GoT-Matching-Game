@@ -1,63 +1,106 @@
-.game {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  min-width: 1040px;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(79, 79, 79);
-}
-.game h2 {
-  text-align: center;
-  width: 100vw;
-}
-.cards-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 80vw;
-}
+@import url("https://fonts.googleapis.com/css?family=MedievalSharp&display=swap");
+
 .back {
   z-index: 2;
   transform: rotateY(0deg);
   background-color: grey;
 }
 
-.card-container.flipped .card {
-  transform: rotateY(180deg);
-}
-
 .front {
   transform: rotateY(180deg);
 }
 .card {
-  background-color: rgb(202, 198, 198);
+  background: linear-gradient(
+    45deg,
+    rgba(217, 210, 210, 1) 0%,
+    rgba(201, 194, 194, 1) 19%,
+    rgba(180, 169, 169, 1) 43%,
+    rgba(172, 163, 163, 1) 63%,
+    rgba(153, 147, 147, 1) 92%
+  );
+  box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.17), 0px 2px 5px 3px rgba(0, 0, 0, 0.12);
+
   margin: 5px;
-  margin: 5px;
-  padding: 25px;
-  height: 185px;
-  width: 120px;
+  height: 245px;
+  width: 150px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 1s;
+
+  /* transform: rotateY(120deg); */
 }
 
 .card img {
   height: 100%;
   width: 100%;
 }
+.top-logo {
+  height: 130px;
+  width: 200px;
+}
 
-button {
-  position: absolute;
-  bottom: 20%;
+.board h1 {
+  font-family: "MedievalSharp", cursive;
+  letter-spacing: 0.2rem;
+}
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
 .board {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
   height: 100vh;
-  background-color: rgb(88, 85, 85);
+  /* background-color: rgb(129, 184, 134); */
   justify-content: center;
   align-items: center;
+  position: fixed;
+}
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 1300px;
+  min-width: 1300px;
+  margin: 10px;
+  /* background-color: rgb(153, 99, 99); */
+  overflow: hidden;
+}
+.modal {
+  display: flex;
+  background-color: rgb(243, 237, 237);
+  width: 400px;
+  height: 90px;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.2),
+    1px 2px 2px 2px rgba(0, 0, 0, 0.17), 2px 2px 5px 3px rgba(0, 0, 0, 0.226);
+}
+.modal h1 {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: bold;
+  background-color: rgb(90, 146, 76);
+  border: none;
+  cursor: pointer;
+  border: 1px solid rgb(90, 146, 76);
+  border-radius: 4px;
+  outline: none;
+}
+button:hover {
+  background-color: rgb(102, 165, 86);
 }

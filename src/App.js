@@ -13,6 +13,8 @@ import backImg6 from "./images/backImage6.PNG";
 import backImg7 from "./images/backImage7.PNG";
 import backImg8 from "./images/backImage8.PNG";
 import backImg9 from "./images/backImage9.PNG";
+import backImg10 from "./images/backImage10.PNG";
+import backImg11 from "./images/backImage11.PNG";
 
 function App() {
   const cards = gameCards();
@@ -40,7 +42,9 @@ function gameCards() {
     backImg6,
     backImg7,
     backImg8,
-    backImg9
+    backImg9,
+    backImg10,
+    backImg11
   };
   const cards = Object.keys(images).reduce((arr, i) => {
     console.log(i);
