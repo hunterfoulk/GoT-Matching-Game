@@ -21,9 +21,7 @@ function App() {
 
   return (
     <>
-      <div className="App">
-        <Board cards={cards} />
-      </div>
+      <Board cards={cards} />
     </>
   );
 }

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Card from "./card";
 import _ from "lodash";
+import backgroundImage from "../images/background.jpg";
+import Player from "../components/player";
+import { FaPlay } from "react-icons/fa";
 
 const Board = props => {
   const [cards, setCards] = useState(props.cards);
@@ -70,7 +73,9 @@ const Board = props => {
     );
   }, [turns, matched]);
 
-  return (
+  //ia600908.us.archive.org/12/items/tvtunes_20712/Game%20of%20Thrones.mp3
+
+  https: return (
     <>
       <div className="board">
         <div className="text">
@@ -79,6 +84,7 @@ const Board = props => {
         <div className="count-container">
           <div className="count-circle"> {count}</div>
         </div>
+        <Player />
         {modal && (
           <div className="modal">
             <h1>You found all the matches!</h1>

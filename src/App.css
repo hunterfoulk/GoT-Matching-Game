@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=MedievalSharp&display=swap");
+@import url("https://lh3.googleusercontent.com/proxy/P4Kxfby5TTlEkIzbCSsVxxtpV8uthzXIxW05WlmuzhOsJlQlPMwLdXQvjlFGv0E12eVICrXbmnrQuoaG8OkYd1A3sEHtJ-MIEvmgP4tS1Q");
 
 .front {
   transform: rotateY(180deg);
@@ -12,8 +13,8 @@
     rgba(172, 163, 163, 1) 63%,
     rgba(153, 147, 147, 1) 92%
   );
-  box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.2),
-    0px 2px 2px 0px rgba(0, 0, 0, 0.17), 0px 2px 5px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 2px 3px 2px -2px rgba(0, 0, 0, 0.185),
+    2px 2px 2px 1px rgba(0, 0, 0, 0.411), 0px 2px 5px 3px rgba(0, 0, 0, 0.171);
 
   margin: 5px;
   height: 245px;
@@ -48,12 +49,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
+  width: 100vw;
   height: auto;
-  /* background-color: rgb(129, 184, 134); */
-  justify-content: center;
+  /* background-color: rgb(55, 56, 55); */
   align-items: center;
+  overflow: hidden;
   position: fixed;
+  /* background-image: "https://lh3.googleusercontent.com/proxy/P4Kxfby5TTlEkIzbCSsVxxtpV8uthzXIxW05WlmuzhOsJlQlPMwLdXQvjlFGv0E12eVICrXbmnrQuoaG8OkYd1A3sEHtJ-MIEvmgP4tS1Q"; */
 }
 .cards-container {
   display: flex;
@@ -63,8 +65,10 @@
   align-items: center;
   width: 1300px;
   min-width: 1300px;
-  margin: 10px;
-  height: 80vh;
+  margin: 11px;
+  height: auto;
+  position: relative;
+  bottom: 15px;
   /* background-color: rgb(153, 99, 99); */
   overflow: hidden;
 }
@@ -110,7 +114,23 @@ button:hover {
   align-items: center;
   justify-content: center;
   /* background-color: rgb(155, 84, 84); */
+  position: relative;
+  bottom: 15px;
   width: 100%;
   /* position: relative;
   top: 30px; */
+}
+.play-button {
+  position: relative;
+  bottom: 5px;
+  padding: 5px;
+  background-color: rgb(71, 138, 71);
+  border: none;
+}
+.play-button:hover {
+  background-color: rgb(91, 160, 91);
+}
+.icon1 {
+  height: 16px;
+  width: 16px;
 }
